@@ -179,7 +179,7 @@ def player_numbers(team)
   
   game_hash.each do |homeOrAway, info|
     if game_hash[homeOrAway][:team_name] == team
-      game_hash[save][:players].each do |player|
+      game_hash[homeOrAway][:players].each do |player|
         numbers_array.push(player[:number])
       end
     end
