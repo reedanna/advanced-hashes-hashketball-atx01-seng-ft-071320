@@ -175,8 +175,7 @@ end
 
 def player_numbers(team)
   numbers_array = []
-  save = ""
-  
+
   game_hash.each do |homeOrAway, info|
     if game_hash[homeOrAway][:team_name] == team
       game_hash[homeOrAway][:players].each do |player|
@@ -184,6 +183,7 @@ def player_numbers(team)
       end
     end
   end
+  print numbers_array
 end
 
 player_numbers("Brooklyn Nets")
