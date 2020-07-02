@@ -180,8 +180,11 @@ def player_numbers(team)
     if game_hash[homeOrAway][:team_name] == team
       game_hash[homeOrAway][:players] do |player|
         numbers_array.push(player[:number])
+        print player[:number]
       end
     end
   end
   numbers_array
 end
+
+player_numbers("Brooklyn Nets")
