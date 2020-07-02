@@ -161,4 +161,5 @@ def team_colors(team)
       output = game_hash[homeOrAway][:colors]
     end
   end
+  output
 end
