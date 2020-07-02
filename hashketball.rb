@@ -200,3 +200,16 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+  max_shoe_size = 0
+  max_shoe_rebounds = 0
+  
+  game_hash.each do |homeOrAway, info|
+    game_hash[homeOrAway][:players].each do |player|
+      if player[:shoe] > max_shoe_size
+        player[:shoe] = max_shoe_size
+        player[:rebounds] = max_shoe_rebounds
+      end
+    end
+  end
+  max_shoe_rebounds
+end
