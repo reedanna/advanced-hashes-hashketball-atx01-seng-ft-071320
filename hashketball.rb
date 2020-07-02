@@ -185,5 +185,3 @@ def player_numbers(team)
   end
   print numbers_array
 end
-
-player_numbers("Brooklyn Nets")
