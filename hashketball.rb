@@ -133,14 +133,11 @@ def num_points_scored(player)
   which_index = ""
   
   game_hash.each do |team, info|
-    which_team = team
     game_hash[team][:players].each do |which_player|
       if which_player[:player_name] == player
         output = which_player[:points]
       end
     end
   end
-  print output
+  output
 end
-
-num_points_scored("Jeff Adrien")
