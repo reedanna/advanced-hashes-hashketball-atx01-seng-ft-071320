@@ -129,13 +129,24 @@ end
 # Write code here
 def num_points_scored(player)
   output = ""
-  which_team = ""
-  which_index = ""
   
   game_hash.each do |team, info|
     game_hash[team][:players].each do |which_player|
       if which_player[:player_name] == player
         output = which_player[:points]
+      end
+    end
+  end
+  output
+end
+
+def shoe_size(player)
+  output = ""
+  
+  game_hash.each do |team, info|
+    game_hash[team][:players].each do |which_player|
+      if which_player[:player_name] == player
+        output = which_player[:shoe]
       end
     end
   end
