@@ -168,7 +168,7 @@ def team_names
   team_array = []
   
   game_hash.each do |homeOrAway, info|
-    team_array.push(game_hash[homeOrAway][:team_name]
+    team_array.push(game_hash[homeOrAway][:team_name])
   end
   team_array
 end
